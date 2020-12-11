@@ -1,27 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <link rel="shortcut icon" href="https://www.lms.tagumcitynhs.ph/theme/image.php/boost/theme/1602664302/favicon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filipino: Paggawa ng BUOD!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Question {background-color: darkseagreen;}
+#Answer {background-color: blue;}
+</style>
 </head>
-<body style="background-color: aliceblue;">
-    
-    <div align="center">
-        
-    <h2>Suriin Natin: Paggawa ng BUOD!</h2>
-    <hr width="25%">
+<body>
+
+<button class="tablink" onclick="openPage('Question', this, 'darkseagreen')" id="defaultOpen">Question</button>
+<button class="tablink" onclick="openPage('Answer', this, 'blue')">Answer</button>
+
+<div id="Question" class="tabcontent">
+<div align="center">
+  <h3>Question</h3>
+  </div>
+  
+  <div align="center">
+  <img src="https://www.lms.tagumcitynhs.ph/pluginfile.php/15036/question/questiontext/56835/1/4672/121165699_639465380274213_775970799564373168_n.jpg", height="150">
+  </div>
+  <h3 style='color:black'><b>Panuto:</b> Batay sa mga pangyayari sa larawan, bumuo ng buod ng kuwento. Puwedeng lumikha ng sariling pangalan ng mga tauhan.</h3>
+  <h3 style='color:black'>Maaaring ilagay ang sagot sa pamamagitan ng pag-encode o pagta-type sa loob ng box na makikita sa ibaba o puwede rin na gumamit ng WPS o Microsoft Word sa paggawa ng buod sa pamamagitan ng pag "drag and drop files" na nasa ibaba. </h3>
 </div>
 
-<div align="center">
 
-    <img src="https://www.lms.tagumcitynhs.ph/pluginfile.php/15036/question/questiontext/56835/1/4672/121165699_639465380274213_775970799564373168_n.jpg", height="200" width="200">
+<div id="Answer" class="tabcontent">
+  <h3>Answer</h3>
+  <p>No answer yet, reeeee</p>
 </div>
-<div align="center">
-    <p>u got jebiated
-    </p>
-    <p1>its still unfinished</p1>
-</div>
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
 </body>
-</html>
+</html> 
